@@ -1,8 +1,14 @@
+/* @flow */
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+type Props = {
+};
 
-class App extends Component {
+type State = {
+};
+
+class App extends Component<Props, State> {
   render() {
     return (
       <div className="App">
