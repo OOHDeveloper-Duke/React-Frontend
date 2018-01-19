@@ -18,6 +18,17 @@
   font-size: 1.5em;
 }
 
+.CodingPad{
+  left-padding: 5px;
+}
+/*
+.StudentQueue{
+  display:inline-block;
+  float: right;
+  width: 20%;
+  padding: 10px;
+} */
+
 .App-intro {
   font-size: large;
 }
