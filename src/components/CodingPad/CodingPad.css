@@ -1,0 +1,18 @@
+.Theme {
+  width: 20%;
+  display:inline-block;
+  float: left;
+
+}
+.Mode {
+  width: 20%;
+  display:inline-block;
+  float: left;
+  padding-left: 5px;
+}
+.dp{
+  width: 100%;
+  display:inline-block;
+  padding-bottom: 5px;
+  float: left;
+}
