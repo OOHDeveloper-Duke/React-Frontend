@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CodingPad from './components/CodingPad/CodingPad'
-import StudentQueue from './components/StudentQueue'
+import StudentQueue from './components/Queue/StudentQueue'
 import {Grid} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 
@@ -28,7 +28,7 @@ class App extends Component<Props, State> {
             <Grid.Column width={6}>
             </Grid.Column>
             <Grid.Column width={2}>
-              <div className="StudentQueue">
+              <div>
                 <StudentQueue />
               </div>
             </Grid.Column>
