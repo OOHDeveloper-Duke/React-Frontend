@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import { Card, Image, Feed, Button } from 'semantic-ui-react';
+import { Card, Image, Feed, Button, Loader, Dimmer } from 'semantic-ui-react';
 import './Queue.css';
 
 type Props = {
@@ -11,6 +11,9 @@ type State = {
 class StudentQueue extends Component<Props, State> {
   constructor(props) {
     super(props);
+    this.state={
+      Q: null,
+    }
     this.onStudentClick = this.onStudentClick.bind(this);
     this.populate = this.populate.bind(this);
   }
@@ -33,25 +36,28 @@ class StudentQueue extends Component<Props, State> {
        </Card.Content>
       </Card>);
     }
-    return arr;
+    if(this.state.Q === null){
+      return <Loader active>Loading</Loader>
+    }
+    else{
+      return arr;
+    }
   }
 
   render() {
 
     return (
       <div className="SQ">
-
-      <Card.Group itemsPerRow={1} >
-        {false &&
-          <Card>
-               <Button basic color='green'>Join</Button>
-               <Button basic color='red' disabled={true}>Leave</Button>
-          </Card>
-        }
-
-        {this.populate()}
-
-     </Card.Group>
+        <Card.Group itemsPerRow={1} >
+          {true &&
+            <Card>
+                 <Button basic color='green'>Join</Button>
+                 <Button basic color='red' disabled={true}>Leave</Button>
+            </Card>
+          }
+          <Loader>Loading</Loader>
+          {this.populate()}
+       </Card.Group>
    </div>
     );
   }
