@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import { Card, Image, Feed, Button, Loader, Dimmer } from 'semantic-ui-react';
+import { Card, Button, Loader } from 'semantic-ui-react';
 import './Queue.css';
 
 type Props = {
